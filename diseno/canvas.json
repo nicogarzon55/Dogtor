@@ -1,18 +1,31 @@
 {
+  "pages": [
+    { "id": "page-1", "name": "Paleta definitiva" },
+    { "id": "page-2", "name": "Opciones descartadas" }
+  ],
   "artboards": [
-    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 880, "h": 1180, "title": "A · Verde clínico" },
-    { "file": "OpcionB.dc.html", "x": 1000, "y": 0, "w": 880, "h": 1180, "title": "B · Azul confianza" },
-    { "file": "OpcionC.dc.html", "x": 2000, "y": 0, "w": 880, "h": 1180, "title": "C · Salvia y terracota" },
-    { "file": "OpcionD.dc.html", "x": 3000, "y": 0, "w": 880, "h": 1180, "title": "D · Carbón y ámbar" }
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 880, "h": 1230, "title": "Verde clínico · definitiva", "page": "page-1" },
+    { "file": "OpcionB.dc.html", "x": 0, "y": 0, "w": 880, "h": 1180, "title": "B · Azul confianza", "page": "page-2" },
+    { "file": "OpcionC.dc.html", "x": 1000, "y": 0, "w": 880, "h": 1180, "title": "C · Salvia y terracota", "page": "page-2" },
+    { "file": "OpcionD.dc.html", "x": 2000, "y": 0, "w": 880, "h": 1180, "title": "D · Carbón y ámbar", "page": "page-2" }
   ],
   "annotations": [
     {
-      "id": "como-leerlo",
+      "id": "definitiva",
+      "x": 960,
+      "y": 0,
+      "w": 520,
+      "page": "page-1",
+      "text": "Sistema de color de Dogtor.\n\nSe evaluaron cuatro direcciones (página «Opciones descartadas») y se eligió la A, Verde clínico. Después se afinó para alinearla con el logo: el marca 600 es el teal del círculo y el acento 300 es el dorado del collar.\n\nEstos son los valores que están hoy en el código, en dogtor-web/src/index.css, dentro del bloque @theme. Ningún componente escribe un color literal: todos usan los tokens, así que cambiar la identidad visual del sistema es cambiar ese bloque y nada más.\n\nTipografía: Outfit para títulos, Figtree para el resto."
+    },
+    {
+      "id": "descartadas",
       "x": 0,
-      "y": -230,
-      "w": 560,
-      "text": "Cuatro direcciones de color para Dogtor.\n\nLas cuatro usan la misma tipografía, el mismo layout y el mismo contenido a propósito: lo único que cambia es el color, para que la comparación sea justa. Cada una muestra la escala de marca 50–900, el acento del módulo de adopción, los colores de estado, las superficies y cómo se ve todo aplicado al panel de la clínica.\n\nAl pie de cada una están los contrastes calculados: las cuatro pasan AA.\n\nElige una (o mézclalas) y la paso a los tokens de dogtor-web/src/index.css."
+      "y": -210,
+      "w": 620,
+      "page": "page-2",
+      "text": "Las tres direcciones que no se eligieron.\n\nSe conservan como registro de la decisión: cada una lleva su motivación y su contra, y las cuatro usaban la misma tipografía y el mismo layout a propósito, para que la única variable fuera el color.\n\nNinguna de estas paletas está en el código."
     }
   ],
-  "launch": { "view": "canvas" }
+  "launch": { "view": "canvas", "page": "page-1" }
 }
