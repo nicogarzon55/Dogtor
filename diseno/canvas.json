@@ -1,0 +1,18 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 880, "h": 1180, "title": "A · Verde clínico" },
+    { "file": "OpcionB.dc.html", "x": 1000, "y": 0, "w": 880, "h": 1180, "title": "B · Azul confianza" },
+    { "file": "OpcionC.dc.html", "x": 2000, "y": 0, "w": 880, "h": 1180, "title": "C · Salvia y terracota" },
+    { "file": "OpcionD.dc.html", "x": 3000, "y": 0, "w": 880, "h": 1180, "title": "D · Carbón y ámbar" }
+  ],
+  "annotations": [
+    {
+      "id": "como-leerlo",
+      "x": 0,
+      "y": -230,
+      "w": 560,
+      "text": "Cuatro direcciones de color para Dogtor.\n\nLas cuatro usan la misma tipografía, el mismo layout y el mismo contenido a propósito: lo único que cambia es el color, para que la comparación sea justa. Cada una muestra la escala de marca 50–900, el acento del módulo de adopción, los colores de estado, las superficies y cómo se ve todo aplicado al panel de la clínica.\n\nAl pie de cada una están los contrastes calculados: las cuatro pasan AA.\n\nElige una (o mézclalas) y la paso a los tokens de dogtor-web/src/index.css."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

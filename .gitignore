@@ -1,0 +1,30 @@
+# Dependencias y builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Tableros de diseño: se versionan los artboards (.dc.html) y canvas.json,
+# no el HTML generado a partir de ellos.
+diseno/paletas-dogtor.html
+
+# Configuración local del entorno de desarrollo
+.claude/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store

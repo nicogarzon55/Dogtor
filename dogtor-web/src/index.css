@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Dogtor · Tokens de diseño
+   ---------------------------------------------------------------------------
+   Paleta "Verde clínico", alineada con el logo: el marca-600 es el teal del
+   círculo y el acento-400 es el dorado del collar.
+
+   Ningún componente debe escribir un color literal: siempre estos tokens
+   (bg-brand-600, text-ink, border-line, etc.). Cambiar la identidad visual
+   del sistema es cambiar este bloque y nada más.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* Marca — navegación, botones primarios y estados activos */
+  --color-brand-50: #eef8f7;
+  --color-brand-100: #d3edeb;
+  --color-brand-200: #a8dbd8;
+  --color-brand-300: #74c2be;
+  --color-brand-400: #47a5a1;
+  --color-brand-500: #2a8985;
+  --color-brand-600: #1f6e6e; /* teal del logo · blanco encima 6,1:1 */
+  --color-brand-700: #1a5a5a;
+  --color-brand-800: #184a4a;
+  --color-brand-900: #163e3e;
+
+  /* Acento — módulo de adopción; dorado del collar del logo */
+  --color-accent-50: #fdf8e9;
+  --color-accent-100: #f9edc4;
+  --color-accent-200: #f3dc8c;
+  --color-accent-300: #e9c34a; /* collar */
+  --color-accent-400: #d4a824;
+  --color-accent-500: #b98b12;
+  --color-accent-600: #8a6408; /* blanco encima 5,4:1 */
+  --color-accent-700: #6f5008;
+  --color-accent-800: #5b410b;
+  --color-accent-900: #4c360c;
+
+  /* Estados — alertas de inventario, vencimientos, urgencias 24h.
+     El éxito es verde, no teal, para que no se confunda con la marca. */
+  --color-success: #15803d;
+  --color-warning: #b45309;
+  --color-danger: #c02626;
+  --color-info: #1d4ed8;
+
+  /* Superficies y texto */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2f7f6;
+  --color-ink: #12201f; /* sobre el fondo 15,5:1 */
+  --color-ink-muted: #566a68;
+  --color-line: #dce8e6;
+
+  /* Tipografía */
+  --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-muted text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  /* Accesibilidad: foco siempre visible (requerimiento de interfaces de usuario) */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
